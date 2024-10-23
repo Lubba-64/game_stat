@@ -1,6 +1,6 @@
 [package]
 name = "game_stat"
-version = "0.3.4"
+version = "0.3.5"
 edition = "2021"
 categories = ["game-development"]
 keywords = ["gamedev", "stats"]
@@ -15,7 +15,7 @@ repository = "https://github.com/TanTanDev/game_stat.git"
 [dependencies]
 serde = { version = "1.0", optional = true, features = ["derive", "rc"] }
 tinyvec = { version = "1.6", features = ["alloc", "rustc_1_55"] }
-bevy_reflect = { version = "0.14", optional = true }
+bevy_reflect = { version = "0.14.2", optional = true }
 
 [features]
 default = []
