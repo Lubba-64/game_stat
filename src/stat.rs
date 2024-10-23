@@ -63,6 +63,8 @@ pub struct StatModifierHandleTag;
 /// ```const M: usize``` decides how many modifiers a stat can maximally hold (modifier are internally an array on the stack)
 #[derive(Clone, Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "reflect", derive(Reflect))]
+#[cfg_attr(feature = "reflect", reflect(Serialize, Deserialize))]
 pub struct Stat<const M: usize> {
     pub base_value: f32,
     // calculated from base_value and modifiers
