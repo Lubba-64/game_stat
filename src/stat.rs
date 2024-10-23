@@ -71,11 +71,11 @@ pub struct Stat<const M: usize> {
     pub base_value: f32,
     // calculated from base_value and modifiers
     #[cfg_attr(feature = "serde", serde(skip, default = "default_value"))]
-    #[cfg_attr(feature = "reflect", reflect(skip))]
+    #[cfg_attr(feature = "reflect", reflect(ignore))]
     value: InteriorCell<f32>,
 
     #[cfg_attr(feature = "serde", serde(skip))]
-    #[cfg_attr(feature = "reflect", reflect(skip))]
+    #[cfg_attr(feature = "reflect", reflect(ignore))]
     modifiers: InteriorCell<TinyVec<[ModifierMeta; M]>>,
 }
 
