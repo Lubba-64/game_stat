@@ -1,6 +1,6 @@
 use crate::modifier::StatModifier;
 #[cfg(feature = "reflect")]
-use bevy_reflect::Reflect;
+use bevy_reflect::{Reflect, ReflectDeserialize, ReflectSerialize};
 use tinyvec::{ArrayVec, TinyVec};
 
 // By default (single-threaded) implementation is most optimized by using std::rc
