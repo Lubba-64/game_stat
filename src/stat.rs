@@ -79,6 +79,12 @@ pub struct Stat<const M: usize> {
     modifiers: InteriorCell<TinyVec<[ModifierMeta; M]>>,
 }
 
+impl<const M: usize> PartialEq for Stat<M> {
+    fn eq(&self, other: &Self) -> bool {
+        self.base_value == other.base_value
+    }
+}
+
 #[cfg(feature = "serde")]
 fn default_value() -> InteriorCell<f32> {
     new_interior_cell(0.0f32)
